@@ -1,12 +1,19 @@
 'use strict';
 
 const express = require('express');
-
 const app = express();
 
-app.get('/', (req, res) => {
-  res.status(200).send('Hello, world!');
-});
+app.use(express.static('public'));
+
+// app.get('/', (req, res) => {
+// //	res.status(200).send('Hello, index!');
+// 	console.log('rendering index to client');
+// 	res.render('index');
+// });
+// 
+// app.get('/.*', (req, res) => {
+//   res.status(200).send('Hello, any other page!');
+// });
 
 if (module === require.main) {
   // [START server]

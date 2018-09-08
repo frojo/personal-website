@@ -3,7 +3,7 @@
 const Storage = require('@google-cloud/storage');
 const storage = Storage();
 const bucket = storage.bucket('primordial-saga-207919.appspot.com');
-const downloadOptions = {destination : 'public/game_data/beauties-and-the-beast/Build/new.data.unityweb'}
+const downloadOptions = {destination : 'public/game_data/beauties-and-the-beast/Build/beauties-and-the-beast.data.unityweb'}
 
 const express = require('express');
 const app = express();
@@ -12,7 +12,7 @@ app.use(express.static('public'));
 
 if (module === require.main) {
   // Download the big juicy beauty and the beast data file from GCS
-  bucket.file('new.data.unityweb').download(downloadOptions)
+  bucket.file('beauties-and-the-beast.data.unityweb').download(downloadOptions)
   .then(() => {
   	console.log('Downloaded the big data file');
   })

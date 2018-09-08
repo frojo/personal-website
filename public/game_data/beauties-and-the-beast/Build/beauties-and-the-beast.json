@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 536870912,
+"dataUrl": "beauties-and-the-beast.data.unityweb",
+"asmCodeUrl": "beauties-and-the-beast.asm.code.unityweb",
+"asmMemoryUrl": "beauties-and-the-beast.asm.memory.unityweb",
+"asmFrameworkUrl": "beauties-and-the-beast.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

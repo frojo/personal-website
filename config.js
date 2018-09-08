@@ -25,6 +25,7 @@ nconf
   .env([
     'DATA_BACKEND',
     'GCLOUD_PROJECT',
+  	'GCLOUD_STORAGE_BUCKET',
     'INSTANCE_CONNECTION_NAME',
     'MYSQL_USER',
     'MYSQL_PASSWORD',
@@ -44,6 +45,7 @@ nconf
     // This is the id of your project in the Google Cloud Developers Console.
     GCLOUD_PROJECT: 'primordial-saga-207919',
 
+  	GCLOUD_STORAGE_BUCKET: 'website-datastore',
     MYSQL_USER: '',
     MYSQL_PASSWORD: '',
 
@@ -52,6 +54,7 @@ nconf
 
 // Check for required settings
 checkConfig('GCLOUD_PROJECT');
+checkConfig('GCLOUD_STORAGE_BUCKET');
 
 if (nconf.get('DATA_BACKEND') === 'cloudsql') {
   checkConfig('MYSQL_USER');

@@ -22,10 +22,18 @@
     "requiresProjectId": true,
     "test": {
       "app": {
+        "requiredEnvVars": [
+          "GCLOUD_STORAGE_BUCKET"
+        ],
         "args": [
           "app.js"
         ],
-        "msg": "Francisco Rojo's website"
+        "msg": "Francisco Rojo's website",
+        "build": {
+          "requiredEnvVars": [
+            "GCLOUD_STORAGE_BUCKET"
+          ]
+        }
       }
     }
   },
@@ -41,6 +49,7 @@
     ]
   },
   "dependencies": {
+    "@google-cloud/storage": "^1.6.0",
     "express": "4.16.2"
   },
   "devDependencies": {

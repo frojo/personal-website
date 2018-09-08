@@ -1,5 +1,8 @@
 runtime: nodejs8
 
+env_variables:
+  GCLOUD_STORAGE_BUCKET: website-datastore
+
 handlers:
 - url: /
   static_files: public/index.html
